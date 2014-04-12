@@ -1,0 +1,9 @@
+Package: com.infinitesolutions.hcexam
+Name: HCExam
+Depends: 
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome application!
+Maintainer: Arnav Sankaran
+Author: Arnav Sankaran
+Section: Utilities
