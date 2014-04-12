@@ -14,10 +14,13 @@
  
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *fullURL = @"http://www.google.com";
-    NSURL *url = [NSURL URLWithString:fullURL];
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:requestObj];
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+    NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+    [webView loadHTMLString:htmlString baseURL:nil];
+    //NSString *fullURL = @"http://www.google.com";
+    //NSURL *url = [NSURL URLWithString:fullURL];
+    //NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    //[webView loadRequest:requestObj];
 }
  
 @end
